@@ -167,11 +167,14 @@ void displayExpense() {
         return;
     }
 
-    printf("\nID\tCategory\tAmount\n");
-    printf("--------------------------------\n");
+    printf("\n%-5s %-15s %10s\n", "ID", "Category", "Amount");
+    printf("------------------------------------\n");
 
     for (int i = 0; i < count; i++) {
-        printf("%d\t%s\t\t%.2f\n", list[i].id, list[i].category, list[i].amount);
+        printf("%-5d %-15s %10.2f\n",
+               list[i].id,
+               list[i].category,
+               list[i].amount);
     }
 }
 
